@@ -13,7 +13,7 @@ class TeamsPlugin(notify.NotificationPlugin):
     slug = 'msteams'
     author = 'Cody Mize'
     description = 'Post Notifications to Microsoft Teams Channel'
-    version = '0.1.0'
+    version = '0.2.1'
     resource_links = (
         ('Source', 'https://github.com/kingcody/sentry-msteams-plugin'),
     )
@@ -110,8 +110,8 @@ class TeamsPlugin(notify.NotificationPlugin):
                     'content': {
                         '@type': 'MessageCard',
                         '@context': 'https://schema.org/extensions',
-                        'summary': '[%b] %b' % (project_name, title),
-                        'title': '[%b] %b' % (project_name, title),
+                        'summary': b'[%s] %s' % (project_name, title),
+                        'title': b'[%s] %s' % (project_name, title),
                         'sections': [
                             {
                                 'facts': message_facts
