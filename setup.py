@@ -8,7 +8,7 @@ readme_text = open(os.path.join(cwd, 'README.md')).read()
 
 setup(
     name='sentry-msteams-plugin',
-    version='0.2.1',
+    version='0.2.2',
     author='Cody Mize',
     url='https://github.com/kingcody/sentry-msteams-plugin',
     long_description=readme_text,

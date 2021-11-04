@@ -13,7 +13,7 @@ class TeamsPlugin(notify.NotificationPlugin):
     slug = 'msteams'
     author = 'Cody Mize'
     description = 'Post Notifications to Microsoft Teams Channel'
-    version = '0.2.1'
+    version = '0.2.2'
     resource_links = (
         ('Source', 'https://github.com/kingcody/sentry-msteams-plugin'),
     )
@@ -119,12 +119,12 @@ class TeamsPlugin(notify.NotificationPlugin):
                         ],
                         'potentialAction': [
                             {
-                                '@type': 'OpenUri',
+                                '@context': 'http://schema.org',
+                                '@type': 'ViewAction',
                                 'name': 'View in Sentry',
-                                'targets': [{
-                                    'os': 'default',
-                                    'uri': self.add_notification_referrer_param(group.get_absolute_url())
-                                }]
+                                'target': [
+                                    self.add_notification_referrer_param(group.get_absolute_url())
+                                ]
                             }
                         ]
                     }
