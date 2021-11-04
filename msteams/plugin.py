@@ -114,8 +114,17 @@ class TeamsPlugin(notify.NotificationPlugin):
                         'title': '[%b] %b' % (project_name, title),
                         'sections': [
                             {
-                                'facts': message_facts,
-                                'text': '%s to View this Event in Sentry' % notification_link
+                                'facts': message_facts
+                            }
+                        ],
+                        'potentialAction': [
+                            {
+                                '@type': 'OpenUri',
+                                'name': 'View in Sentry',
+                                'targets': [{
+                                    'os': 'default',
+                                    'uri': self.add_notification_referrer_param(group.get_absolute_url())
+                                }]
                             }
                         ]
                     }
