@@ -22,7 +22,7 @@ setup(
     include_package_data=True,
     entry_points={
         'sentry.apps': [
-            'msteams = msteams',
+            # 'msteams = msteams',
         ],
         'sentry.plugins': [
             'msteams = msteams.plugin:TeamsPlugin',
