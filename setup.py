@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 import os
 
-cwd = os.path.realpath(path=os.path.join(os.getcwd(), os.path.dirname(__file__)))
+cwd = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 readme_text = open(os.path.join(cwd, 'README.md')).read()
 
 setup(
