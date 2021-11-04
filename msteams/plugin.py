@@ -110,8 +110,8 @@ class TeamsPlugin(notify.NotificationPlugin):
                     'content': {
                         '@type': 'MessageCard',
                         '@context': 'https://schema.org/extensions',
-                        'summary': '[%s] %s' % (project_name, title),
-                        'title': '[%s] %s' % (project_name, title),
+                        'summary': '[%b] %b' % (project_name, title),
+                        'title': '[%b] %b' % (project_name, title),
                         'sections': [
                             {
                                 'facts': message_facts,
