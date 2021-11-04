@@ -9,7 +9,7 @@ Based off the [Sentry Plugins](https://github.com/getsentry/sentry-plugins) writ
 The Sentry MS Teams plugin is available in PyPi as [sentry-msteams](https://pypi.org/project/sentry-msteams-plugin/). To install it, in your `requirements.txt` file, add the below package name:
 
 ```
-sentry-msteams
+sentry-msteams-plugin
 ```
 
 ## Configuration
